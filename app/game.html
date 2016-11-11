@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <button class="pull-right" ng-click="$ctrl.newGame()">Start Game</button>
+    <h3>Connect 4</h3>
+  </div>
+  <div class="panel-body text-center">
+    <div class="board">
+      <div class="row" ng-repeat="row in $ctrl.grid">
+        <div class="cell" ng-repeat="cell in row" ng-click="$ctrl.dropToken(cell.col)">
+          <div class="token" ng-style="{'background-color': cell.hasToken ? cell.color : '#fff'}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
